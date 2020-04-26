@@ -1,4 +1,4 @@
-function piram(num, row=0, level=''){
+function pyramid(num, row=0, level=''){
 
   // First we check base case: num and row are equal
   if(num === row){
@@ -9,7 +9,7 @@ function piram(num, row=0, level=''){
   // Parameters change: row + 1
   if(level.length === (2 * num - 1)){
     console.log(level);
-    return piram(num, row+1);
+    return pyramid(num, row+1);
   }
 
   // Logic: Define half and check on the side(s)
@@ -20,8 +20,8 @@ function piram(num, row=0, level=''){
      level +=' ';
   }
   
-  piram(num, row, level);
+  pyramid(num, row, level);
 }
 
 // Example:
-piram(5);
+pyramid(5);
